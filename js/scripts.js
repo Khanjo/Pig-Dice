@@ -1,20 +1,36 @@
 //Business Logic
-const Dice = {
-    one: 1,
-    two: 2,
-    three: 3,
-    four: 4,
-    five: 5,
-    six: 6
+let player1 = "";
+let player2 = "";
+
+const Die = function (sides) {
+    this.sides = sides || 6;
 }
 
-throwdice = function () {
-    return math.floor(6 * Math.random()) + 1
-}
-
-Dice.prototype.rollDice = function (obj) {
-    let keys = Object.keys(obj);
-    return obj[keys[keys.length * Math.random() << 0]];
+Die.prototype.rollDie = function () {
+    return Math.floor((Math.random() * this.sides) + 1);
 };
+
+function Player(turn) {
+    this.roll = 0;
+    this.tempscore = 0;
+    this.totalscore = 0;
+    this.turn = turn;
+    this.playerName;
+}
+/*
+function Dice() {
+    this.one = 1,
+    this.two = 2,
+    this.three = 3,
+    this.four = 4,
+    this.five = 5,
+    this.six = 6
+}
+
+Dice.prototype.rollDice = function () {
+    let keys = Object.keys(this);
+    return this[keys[keys.length * Math.random() << 0]];
+};
+*/
 
 //User Interface Logic

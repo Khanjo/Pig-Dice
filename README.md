@@ -1,8 +1,8 @@
-Describe: runTotal()
+Describe: rollDie()
 
 test: it will return a random number 1-6
-code: runTotal()
-      console.log()
+code: let die = new Die()
+      console.log(die.rollDie())
 expected result: any number 1-6      
 
 everything starts hidden, when user clicks play, the game will initialize
