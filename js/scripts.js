@@ -26,6 +26,25 @@ Player.prototype.rollone = function () {
         this.tempscore += this.roll;
     }
 }
+// hold 
+Player.prototype.hold = function () {
+    this.totalscore += this.tempscore;
+    this.tempscore = 0;
+    alert("your turn is over")
+}
+
+Player.prototype.winnerCheck = function () {
+    if (this.totalscore >= 100) {
+        alert(this.playerName + " You are the winner!")
+    }
+}
+
+Player.prototype.newGame = function () {
+    this.roll = 0;
+    this.tempscore = 0;
+    this.totalscore = 0;
+    this.playerName = "";
+}
 /*
 function Dice() {
     this.one = 1,
