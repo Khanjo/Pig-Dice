@@ -23,20 +23,31 @@
     </ul>
     The first player to score 100 or more points wins.</p>
 
-    <div id="startGame">
-        <form id="player1">
-            <input required id="player1Name" type="text" placeholder="Player 1 Name">
-        </form>
-        <form id="player2">
-            <input required id="player2Name" type="text" placeholder="Player 2 Name">
-        </form>
-        <button id="start">Start Game</button>
-    </div>
+    <form id="playerNames">
+        <input required id="player1Name" type="text" placeholder="Player 1 Name">
+        <input required id="player2Name" type="text" placeholder="Player 2 Name">
+        <button type="Submit" id="start">Start Game</button>
+    </form>
 
     <div id="gameDisplay">
         <button id="newGame">New Game</button>
         <div id="row">
-            <div></div>
+            <div>
+                <h2>Player 1: <span id="p1"><span></h2>
+                <button id="player1-roll">Roll</button>
+                <button id="player1-hold">Hold</button>
+                <h2>Dice Roll: <span id="die-roll-1"></span></h2>
+                <p>Round Total: <span id="round-total-1"></span></p>
+                <p>Total Score: <span id="total-score-1"></span></p>
+            </div>
+            <div>
+                <h2>Player 2: <span id="p2"><span></h2>
+                <button id="player2-roll">Roll</button>
+                <button id="player2-hold">Hold</button>
+                <h2>Dice Roll: <span id="die-roll-2"></span></h2>
+                <p>Round Total: <span id="round-total-2"></span></p>
+                <p>Total Score: <span id="total-score-2"></span></p>
+            </div>
         </div>
     </div>
 </body>
